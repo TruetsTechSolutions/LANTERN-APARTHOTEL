@@ -46,25 +46,25 @@ export default function GuestBookingPage() {
       {/* Navigation */}
       <header className="bg-slate-950 text-white border-b border-slate-800 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/staff" className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-xl">
-              T
+              🏮
             </div>
             <div>
               <span className="font-bold tracking-wider text-lg uppercase bg-gradient-to-r from-amber-200 to-amber-400 bg-clip-text text-transparent">
-                TURM GRAND HOTEL
+                LANTERN APARTHOTEL
               </span>
               <span className="block text-[10px] text-slate-400 tracking-widest uppercase">
-                Direct Booking Engine
+                Perinthalmanna • Online Guest Booking
               </span>
             </div>
           </Link>
 
           <Link
             href="/staff"
-            className="text-xs font-semibold px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 transition"
+            className="text-xs font-semibold px-4 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold transition"
           >
-            Staff Portal Login →
+            ← Open Staff PMS Dashboard
           </Link>
         </div>
       </header>
@@ -74,13 +74,13 @@ export default function GuestBookingPage() {
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold mb-4">
             <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-            Best Rate Guaranteed • Direct Booking Benefit
+            Near KIMS Al-Shifa Hospital • Best Rate Guaranteed
           </div>
           <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">
-            Reserve Your Alpine Luxury Experience
+            Book Your Stay at Lantern Apart Hotel
           </h1>
           <p className="mt-3 text-slate-400 text-sm max-w-xl mx-auto">
-            Enjoy complimentary high-speed Wi-Fi, mountain spa access, and personalized concierge service.
+            Comfortable luxury apartments and superior rooms in Perinthalmanna for medical visits, family, and business stays.
           </p>
 
           {/* Booking Filter Search Bar */}

@@ -115,6 +115,13 @@ export default function StaffLayout({ children }: { children: React.ReactNode })
               <span className="px-2 py-0.5 rounded bg-rose-50 text-rose-700 font-medium">MakeMyTrip: Online</span>
               <span className="px-2 py-0.5 rounded bg-blue-50 text-blue-700 font-medium">Booking.com: Online</span>
             </div>
+
+            <Link
+              href="/book"
+              className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-amber-50 border border-amber-200 text-amber-900 hover:bg-amber-100 transition flex items-center gap-1.5"
+            >
+              <span>🌐 Test Online Guest Booking ↗</span>
+            </Link>
           </div>
         </header>
 

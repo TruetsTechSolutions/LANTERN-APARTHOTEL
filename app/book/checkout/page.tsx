@@ -50,8 +50,8 @@ function CheckoutContent() {
   const nights = Math.max(1, Math.ceil(diffTime / (1000 * 60 * 60 * 24)));
 
   const basePrice = roomType ? roomType.basePrice * nights : 0;
-  const tourismTax = nights * 3.5;
-  const grandTotal = basePrice + tourismTax;
+  const gstTax = Math.round(basePrice * 0.12);
+  const grandTotal = basePrice + gstTax;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -318,15 +318,15 @@ function CheckoutContent() {
               </div>
             </div>
 
-            {/* Price Breakdown */}
+              {/* Price Breakdown */}
             <div className="space-y-2 pt-2 border-t border-slate-100 text-xs">
               <div className="flex justify-between text-slate-600">
-                <span>Room Charges ({nights} nights):</span>
+                <span>Apartment Charges ({nights} nights):</span>
                 <span>{formatCurrency(basePrice)}</span>
               </div>
               <div className="flex justify-between text-slate-600">
-                <span>City Tourism Tax:</span>
-                <span>{formatCurrency(tourismTax)}</span>
+                <span>GST (12% CGST + SGST):</span>
+                <span>{formatCurrency(gstTax)}</span>
               </div>
               <div className="pt-3 border-t border-slate-200 flex justify-between text-base font-black text-slate-900">
                 <span>Grand Total:</span>
@@ -345,18 +345,25 @@ export default function CheckoutPage() {
     <div className="min-h-screen bg-slate-50">
       <header className="bg-slate-950 text-white border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/staff" className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-xl">
-              T
+              🏮
             </div>
             <div>
               <span className="font-bold tracking-wider text-lg uppercase bg-gradient-to-r from-amber-200 to-amber-400 bg-clip-text text-transparent">
-                TURM GRAND HOTEL
+                LANTERN APARTHOTEL
               </span>
               <span className="block text-[10px] text-slate-400 tracking-widest uppercase">
-                Secure Checkout
+                Perinthalmanna • Secure Checkout
               </span>
             </div>
+          </Link>
+
+          <Link
+            href="/staff"
+            className="text-xs font-semibold px-4 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold transition"
+          >
+            ← Open Staff PMS
           </Link>
         </div>
       </header>
